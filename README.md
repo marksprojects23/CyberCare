@@ -1,1 +1,3 @@
 # CyberCare
+
+CyberCare is a free-to-install web browser extension developed using JavaScript and designed to safeguard inexperienced Internet users, specifically targeting senior citizens. Utilizing advanced threat-detection APIs and machine learning algorithms, this project not only protects users from phishing attacks and dangerous websites but also educates them on responsible browsing practices. By continuously analyzing the user's browsing habits and leveraging real-time threat databases, CyberCare identifies and mitigates risks such as phishing emails that bypass traditional spam filters. In an age where cyber threats are continually evolving, CyberCare serves as a vital tool for promoting secure and informed online experiences.
