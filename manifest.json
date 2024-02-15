@@ -1,7 +1,11 @@
 {
   "manifest_version": 2,
   "name": "CyberCare",
+<<<<<<< HEAD
   "description": "Protect Senior citizens from bad websites and gives education",
+=======
+  "description": "Protects Senior citizens from bad websites and gives education",
+>>>>>>> 904f85dfeced98d86b9a3da9dfb11dee1f17b609
   "version": "1.0",
   "icons": {
     "16": "/images/CyberCare16.png",
@@ -9,7 +13,7 @@
     "128": "/images/CyberCare128.png"
   },
   "page_action": {
-    "default_icon": {
+    "default_icon": {qwewqeqwe
       "16": "/images/CyberCare16.png",
       "48": "/images/CyberCare48.png",
       "128": "/images/CyberCare128.png"
