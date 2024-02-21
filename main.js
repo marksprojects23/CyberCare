@@ -1,5 +1,4 @@
 // popup.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Your dropdown logic here
-  });
-  
+document.addEventListener("DOMContentLoaded", function () {
+  // Your dropdown logic here
+});
