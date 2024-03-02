@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - CyberCare</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .dashboard-container {
+        width: 400px;
+        height: 600px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow-y: auto; /* Allows scrolling if content exceeds 600px height */
+      }
+
+      h2,
+      h3 {
+        color: #333;
+        font-weight: normal;
+        text-align: center;
+      }
+
+      .alerts-section,
+      .data-section {
+        margin-bottom: 20px;
+      }
+
+      .alerts-list,
+      ul {
+        list-style-type: none; /* Removes bullet points */
+        padding: 0;
+      }
+
+      li {
+        background: #e7f4ff; /* Light blue background for contrast */
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px; /* Slightly larger font size for readability */
+      }
+
+      p {
+        font-size: 16px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Assuming your CSS is in a file named style.css -->
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <h2>Dashboard</h2>
+      <div class="alerts-section">
+        <h3>Alerts</h3>
+        <ul class="alerts-list">
+          <li>Alert 1: Unusual login attempt detected.</li>
+          <li>Alert 2: New device detected.</li>
+          <li>Alert 3: High-risk website visited.</li>
+          <!-- Add more alerts here -->
+        </ul>
+      </div>
+      <div class="data-section">
+        <h3>Data & Insights</h3>
+        <p>Your most visited sites this week:</p>
+        <ul>
+          <li>Site 1: 20 visits</li>
+          <li>Site 2: 15 visits</li>
+          <li>Site 3: 10 visits</li>
+          <!-- Add more data points here -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

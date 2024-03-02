@@ -16,7 +16,7 @@
   //   }
   // },
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "pratice.html",
     "default_icon": {
       "16": "/images/CyberCare16.png",
       "48": "/images/CyberCare48.png",
@@ -25,4 +25,3 @@
   },
   "permissions": ["activeTab"]
 }
-

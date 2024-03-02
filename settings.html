@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - CyberCare</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .settings-container {
+        width: 400px;
+        height: 600px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow-y: auto;
+      }
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .setting-option {
+        margin-bottom: 20px;
+        background: #e7f4ff;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      label {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select,
+      textarea,
+      input[type="checkbox"],
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #357abd;
+      }
+
+      textarea {
+        height: 100px;
+        width: 340px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="settings-container">
+      <h2>Settings</h2>
+      <div class="setting-option">
+        <label for="whitelist">Whitelist</label>
+        <textarea
+          id="whitelist"
+          placeholder="Enter URLs separated by commas"
+        ></textarea>
+      </div>
+      <div class="setting-option">
+        <label for="blacklist">Blacklist</label>
+        <textarea
+          id="blacklist"
+          placeholder="Enter URLs separated by commas"
+        ></textarea>
+      </div>
+      <div class="setting-option">
+        <label for="privacy-settings">Privacy Settings</label>
+        <button id="privacy-settings">Configure</button>
+      </div>
+      <div class="setting-option">
+        <label for="language">Language</label>
+        <select id="language">
+          <option value="english" selected>English</option>
+          <option value="spanish">Español</option>
+          <!-- Add more language options as needed -->
+        </select>
+      </div>
+      <div class="setting-option">
+        <label for="update-preferences">Update Preferences</label>
+        <select id="update-preferences">
+          <option value="auto" selected>Automatic Updates</option>
+          <option value="notify">Notify Me</option>
+          <option value="off">Turn Off</option>
+        </select>
+      </div>
+      <div class="setting-option">
+        <label for="education">Education Features</label>
+        <select id="education">
+          <option value="on">On</option>
+          <option value="off">Off</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
