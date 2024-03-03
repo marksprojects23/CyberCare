@@ -1,108 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - CyberCare</title>
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+        body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-      .help-container {
-        width: 400px;
-        height: 600px;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        overflow-y: auto;
-      }
+.help-container {
+  width: 400px;
+  height: 600px;
+  background: white;
+  padding: 20px; /* Adjust padding if necessary */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
 
-      h2,
-      h3 {
-        color: #333;
-      }
+h2 {
+  color: #333;
+  font-size: 24px; /* Increased font size for headings */
+  margin-bottom: 16px; /* Adjusted margin */
+}
 
-      .help-section {
-        margin-bottom: 20px;
-      }
+h3 {
+  color: #333;
+  font-size: 20px; /* Increased font size for subheadings */
+  margin-top: 0;
+  margin-bottom: 14px;
+}
 
-      .help-section h3 {
-        margin-bottom: 10px;
-      }
+.help-section p, .help-section a, .help-section li {
+  font-size: 18px; /* Increased font size for text elements */
+  line-height: 1.4; /* Adjusted line height for readability */
+}
 
-      .help-section ul {
-        list-style: none;
-        padding-left: 0;
-      }
+.help-section {
+  margin-bottom: 10px;
+}
 
-      .help-section ul li a {
-        color: #4a90e2;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+.help-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-      .help-section ul li a:hover {
-        color: #357abd;
-      }
+.help-section ul li a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-      button {
-        padding: 10px 15px;
-        background-color: #4a90e2;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+.help-section ul li a:hover {
+  color: #357abd;
+}
 
-      button:hover {
-        background-color: #357abd;
-      }
+button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size for buttons */
+  margin-top: 10px; /* Added margin-top for spacing */
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="help-container">
-      <h2>Help & Support</h2>
-      <div class="help-section">
-        <h3>FAQs</h3>
-        <ul>
-          <li><a href="#">How to add a site to the whitelist?</a></li>
-          <li><a href="#">What to do if a site is wrongly blocked?</a></li>
-          <!-- More FAQs -->
-        </ul>
-      </div>
-      <div class="help-section">
-        <h3>Contact Support</h3>
-        <p>
-          Email:
-          <a href="mailto:support@cybercare.com">support@cybercare.com</a>
-        </p>
-        <p>Phone: <a href="tel:+18005551234">1-800-555-1234</a></p>
-        <!-- Live chat option if available -->
-      </div>
-      <div class="help-section">
-        <h3>Guided Tutorials</h3>
-        <ul>
-          <li><a href="#">Getting Started with CyberCare</a></li>
-          <li><a href="#">Understanding Alerts</a></li>
-          <!-- More tutorials -->
-        </ul>
-      </div>
-      <div class="help-section">
-        <h3>Submit Feedback</h3>
-        <button onclick="openFeedbackForm()">Submit Feedback</button>
-      </div>
-      <div class="help-section">
-        <h3>Community Forum</h3>
-        <a href="#">Visit the Community Forum</a>
-      </div>
-    </div>
-  </body>
-</html>
+        <h2>Help & Support</h2>
+        <div class="help-section">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="#">How to add a site to the whitelist?</a></li>
+                <li><a href="#">What to do if a site is wrongly blocked?</a></li>
+                <!-- More FAQs -->
+            </ul>
+        </div>
+        <div class="help-section">
+            <h3>Contact Support</h3>
+            <p>Email: <a href="mailto:support@cybercare.com">support@cybercare.com</a></p>
+            <p>Phone: <a href="tel:+18005551234">1-800-555-1234</a></p>
+            <!-- Live chat option if available -->
+        </div>
+        <div class="help-section">
+            <h3>Guided Tutorials</h3>
+            <ul>
+                <li><a href="#">Getting Started with CyberCare</a></li>
+                <li><a href="#">Understanding Alerts</a></li>
+                <!-- More tutorials -->
+            </ul>
+        </div>
+        <div class="help-section">
+            <h3>Submit Feedback</h3>
+            <button onclick="openFeedbackForm()">Submit Feedback</button>
+        </div>
+        <div class="help-section">
+            <h3>Community Forum</h3>
+            <a href="#">Visit the Community Forum</a>
+        </div
