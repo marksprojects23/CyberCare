@@ -1,8 +1,6 @@
 package main
 
 import (
-	"context"
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"math/rand"
@@ -22,10 +20,10 @@ type Settings struct {
     Blacklist []string `json:"blacklist"`
 }
 
-var (
-	ctx context.Context
-	db sql.DB
-)
+// var (
+// 	ctx context.Context
+// 	db sql.DB
+// )
 
 // Temporary storage for settings
 var settingsMap = make(map[string]Settings)
