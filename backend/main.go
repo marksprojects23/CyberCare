@@ -34,7 +34,7 @@ var settingsMap = make(map[string]Settings)
 
 func main() {
 	// PostgreSQL server credentials
-	dbHost := "localhost"
+	dbHost := "database-1.cl0i0y628wpg.us-east-1.rds.amazonaws.com"
 	dbPort := 5432
 	dbUser := "postgres"
 	dbPassword := os.Getenv("DB_PASSWORD")
