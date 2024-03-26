@@ -29,7 +29,7 @@ var (
 )
 
 // Temporary storage for settings
-var settingsMap = make(map[string]Settings)
+// var settingsMap = make(map[string]Settings)
 
 
 func main() {
@@ -102,7 +102,7 @@ func CreateSettings(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    newSettings.UserID = strconv.Itoa(userId)
+    newSettings.UserID = strconv.Itoa(1)
     json.NewEncoder(w).Encode(newSettings)
 }
 
