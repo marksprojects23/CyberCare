@@ -90,6 +90,34 @@
           placeholder="Enter URLs separated by commas"
         ></textarea>
       </div>
+      <script>
+      function fetchAndPopulateLists() {
+      // Replace with the actual URL of your backend endpoint
+      fetch('http://52.86.177.235:8080/settings')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(data => {
+              // Assuming 'data' is an array and you're interested in the first item
+              const settings = data[0];
+
+              // Assuming the backend returns the lists directly as arrays of strings
+              const whitelist = settings.whitelist.join('\n');
+              const blacklist = settings.blacklist.join('\n');
+
+              // Populate the textarea elements
+              document.getElementById('whitelistTextarea').value = whitelist;
+              document.getElementById('blacklistTextarea').value = blacklist;
+          })
+          .catch(error => console.error('There has been a problem with your fetch operation:', error));
+      }
+
+      // Call the function to fetch and populate when the page loads
+      document.addEventListener('DOMContentLoaded', fetchAndPopulateLists);
+      </script>
       <div class="setting-option">
         <label for="privacy-settings">Privacy Settings</label>
         <button id="privacy-settings">Configure</button>

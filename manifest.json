@@ -9,12 +9,13 @@
     "128": "/images/CyberCare128.png"
   },
   "browser_action": {
-    "default_popup": "main.html",
+    "default_popup": "frontend/main.html",
     "default_icon": {
       "16": "/images/CyberCare16.png",
       "48": "/images/CyberCare48.png",
       "128": "/images/CyberCare128.png"
     }
   },
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab",
+  "http://52.86.177.235:8080/*"]
 }
