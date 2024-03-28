@@ -3,64 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Center - CyberCare</title>
-    <!-- <link rel="stylesheet" href="placeholder-style.css"> Link to your CSS file -->
+    <title>CyberCare Education</title>
     <style>
       body {
-        font-family: "Roboto", sans-serif;
+        /* font-family: "Roboto", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Roboto", sans-serif; */
         background-color: #f0f0f0;
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 600px;
-        text-align: center;
+        height: 100vh;
+        max-width: 600px;
+        line-height: 1.3;
       }
-
-      .placeholder-container {
+      .help-container {
         width: 400px;
         height: 600px;
-        max-width: 600px;
+        background: white;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        background: white;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
       }
-
-      h1 {
-        color: #333;
-        margin-bottom: 24px;
+      h1,
+      h2,
+      h3 {
+        color: #000;
+        font-size: 18px;
       }
-
-      p {
-        color: #666;
-        line-height: 1.6;
+      h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+      h3 {
         font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 14px;
       }
-
-      .construction-image {
-        margin-top: 30px;
+      .help-section p,
+      .help-section a,
+      .help-section li {
+        font-size: 18px;
+        line-height: 1.4;
       }
-
-      .construction-image img {
-        max-width: 100%;
-        height: auto;
+      .help-section {
+        margin-bottom: 10px;
+      }
+      .help-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .help-section ul li a {
+        color: #4a90e2;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .help-section ul li a:hover {
+        color: #357abd;
+      }
+      button {
+        padding: 12px 20px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #357abd;
       }
     </style>
   </head>
   <body>
-    <div class="placeholder-container">
-      <h1>Under Construction</h1>
-      <p>We're working hard to create educational content for you!</p>
-      <p>Stay tuned for updates on how to stay safe online.</p>
-      <div class="construction-image">
-        <!-- Image of a construction helmet or barrier -->
-        <!-- You can use the generated image by including it here -->
-        <img
-          src="https://www.shutterstock.com/image-photo/yellow-safety-helmet-on-white-260nw-129478451.jpg"
-          alt="Under Construction"
-        />
-      </div>
+    <div class="help-container">
+      <h2>Welcome to CyberCare</h2>
+      <p>
+        CyberCare is a free web browser extension designed to protect you while
+        you browse the internet.
+      </p>
+
+      <h3>Why Use CyberCare?</h3>
+      <p>
+        CyberCare helps keep you safe from scams, fake websites, and other
+        online dangers.
+      </p>
+
+      <h3>How It Works</h3>
+      <p>
+        CyberCare watches over your internet browsing and warns you if it
+        detects anything suspicious.
+      </p>
+
+      <footer>
+        <p>&copy; 2024 CyberCare. All rights reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
