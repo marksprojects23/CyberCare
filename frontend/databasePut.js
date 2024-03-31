@@ -24,8 +24,15 @@ function setupTextareaListeners() {
     whitelistTextarea.addEventListener('blur', saveSettings);
     blacklistTextarea.addEventListener('blur', saveSettings);
 
-    window.addEventListener('unload', saveSettings);
+    // Save settings when the user presses Enter in the textarea
+    const handleEnterPress = (event) => {
+        if (event.key === 'Enter') {
+            saveSettings();
+        }
+    };
+    whitelistTextarea.addEventListener('keydown', handleEnterPress);
+    blacklistTextarea.addEventListener('keydown', handleEnterPress);
+}
     
     // Call the function to setup listeners
     setupTextareaListeners();
-}
