@@ -64,6 +64,7 @@ func main() {
 	r.Use(enableCORS)
 	r.HandleFunc("/settings", CreateSettings).Methods("POST")
 	r.HandleFunc("/settings", GetSettings).Methods("GET")
+	r.HandleFunc("/settings", UpdateSettings).Methods("PUT")
 
 	http.ListenAndServe(":8080", r)
 }
@@ -107,4 +108,29 @@ func GetSettings(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewEncoder(w).Encode(settingsList)
+}
+
+func UpdateSettings(w http.ResponseWriter, r *http.Request) {
+	var settings Settings
+	if err := json.NewDecoder(r.Body).Decode(&settings); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	// Clear the existing settings
+	_, err := db.Exec("DELETE FROM setting")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Insert the new settings
+	_, err = db.Exec("INSERT INTO setting (whitelist, blacklist) VALUES ($1, $2)",
+		pq.Array(settings.Whitelist), pq.Array(settings.Blacklist))
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.WriteHeader(http.StatusNoContent) // Or http.StatusOK if you prefer
 }
