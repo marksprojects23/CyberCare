@@ -16,6 +16,14 @@
       "128": "/images/CyberCare128.png"
     }
   },
-  "permissions": ["activeTab",
-  "http://52.86.177.235:8080/*"]
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://52.86.177.235:8080/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["frontend/background.js"],
+    "persistent": false
+  }
 }
