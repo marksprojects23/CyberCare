@@ -1,3 +1,9 @@
+function saveSettings() {
+  // Save settings to the database via your backend
+  // Then notify the background script to fetch the updated lists
+  chrome.runtime.sendMessage({ action: "fetchLists" });
+}
+
 function fetchAndPopulateLists() {
   // Replace with the actual URL of your backend endpoint
   fetch("http://52.86.177.235:8080/settings")
@@ -18,6 +24,7 @@ function fetchAndPopulateLists() {
         // Populate the textarea elements
         WhiteList.value += whitelist + "\n";
         BlackList.value += blacklist + "\n";
+        chrome.runtime.sendMessage({ action: "fetchLists" });
         chrome.storage.local.set({ whitelist, blacklist }, function () {
           console.log("Whitelist and blacklist have been saved.");
         });
