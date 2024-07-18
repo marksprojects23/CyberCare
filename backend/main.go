@@ -13,7 +13,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
-// Settings holds whitelist and blacklist settings for a user-
+// Settings holds whitelist and blacklist settings for a user
 type Settings struct {
 	Whitelist []string `json:"whitelist"`
 	Blacklist []string `json:"blacklist"`
